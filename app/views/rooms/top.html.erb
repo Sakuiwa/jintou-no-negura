@@ -1,0 +1,45 @@
+<h1>ここがトップページです。</h1>
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
+<h2>ルーム一覧</h2>
+<table>
+	  <thead>
+    <tr>
+      <th>部屋名</th>
+      <th>説明</th>
+
+    </tr>
+  </thead>
+	<% @rooms.each do |room| %>
+  <thead>
+  	<tr>
+  		<th><%= link_to room.room_name, room_joins_path(room.id) ,method: :post %></th>
+  		<th><%= room.room_content %></th>
+  	</tr>
+  </thead>
+
+<% end %> 
+
+<h2>新規ルーム作成</h2>
+
+<%= form_tag rooms_path do %>
+ <thead>
+	<tr>
+		<th><input type="text" name="room_name"></th>
+		<th><input type="text" name="room_content"></th>
+		<th><input type="submit" value="部屋を新規作成する"></th>
+	</tr>
+ </thead>
+<% end %>
+</table>
+
+
