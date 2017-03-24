@@ -1,0 +1,2 @@
+class Jinrou < ApplicationRecord
+end

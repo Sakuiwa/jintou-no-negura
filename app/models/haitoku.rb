@@ -1,0 +1,2 @@
+class Haitoku < ApplicationRecord
+end

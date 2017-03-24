@@ -1,0 +1,2 @@
+class Kyojin < ApplicationRecord
+end

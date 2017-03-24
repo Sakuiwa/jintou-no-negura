@@ -1,0 +1,2 @@
+class Murabito < ApplicationRecord
+end

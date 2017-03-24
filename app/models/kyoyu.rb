@@ -1,0 +1,2 @@
+class Kyoyu < ApplicationRecord
+end

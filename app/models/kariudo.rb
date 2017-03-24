@@ -1,0 +1,2 @@
+class Kariudo < ApplicationRecord
+end

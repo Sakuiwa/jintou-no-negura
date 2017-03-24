@@ -1,0 +1,2 @@
+class Youko < ApplicationRecord
+end

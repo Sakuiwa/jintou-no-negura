@@ -1,0 +1,2 @@
+class Kyosin < ApplicationRecord
+end

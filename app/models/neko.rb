@@ -1,0 +1,2 @@
+class Neko < ApplicationRecord
+end
