@@ -23,11 +23,11 @@
  	</thead>
  	<% end %>
  </table>
-<%= form_tag(room_chats_path(@room.id)) do %>
- <p><%= current_user.name %><%= current_user.job %> 画像
+<%= form_tag(room_chats_path(@room.id), :remote => true, :id =>"chats_form" ) do %>
+ <p><%= current_user.name %><%= current_user.job %> 画像</p>
  	<input type="text" name="content">
-    <input type="submit" value="発言">
- </p>
+    <!-- <input type="submit" value="発言"> -->
+    <%= submit_tag "送信", :id =>"sub_btn" %>
 <% end %>
 <%#= link_to "役をつける",room_rolecards_path(@room.id), method: :post %>
 <%= link_to "ゲームに参加する",room_jobs_path(@room.id), method: :post %>
