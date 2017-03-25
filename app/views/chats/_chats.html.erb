@@ -10,7 +10,6 @@
  	</thead>
  	<% end %>
  </table>
-
  	<%= form_tag(room_chats_path(@room.id), :remote => true, :id =>"chats_form" ) do %>
  	<input type="text" name="content">
  	<%= submit_tag "発言", :id =>"sub_btn" %>

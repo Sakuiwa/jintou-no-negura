@@ -13,7 +13,7 @@ class ChatsController < ApplicationController
     @chat.job = current_user.job
     @chat.rolecard = current_user.rolecard
   	@chat.save
-  	redirect_to room_path(params[:room_id])
+  	# redirect_to room_path(params[:room_id])
   end
 
   private
