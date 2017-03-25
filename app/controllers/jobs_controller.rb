@@ -13,8 +13,7 @@ class JobsController < ApplicationController
   end
   # def destroy
   #    @room = Room.find(params[:room_id])
-  #    @user = current_user.job
-  #    @user.destroy
+  #    current_user.job = nil
   #    redirect_to room_path(params[:room_id])
   # end
 end

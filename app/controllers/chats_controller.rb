@@ -17,5 +17,4 @@ class ChatsController < ApplicationController
   end
 
   private
-
 end

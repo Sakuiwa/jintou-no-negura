@@ -19,9 +19,9 @@ class RoomsController < ApplicationController
     @user = current_user
     @join = current_user.joins.find_by!(room_id: @room.id)
     @job = User.select(:job,:room_id)
-    @GM = User.where(:job 'GM' and room_id: @room.id) 
-    @PL = User.where(:job 'PL' and room_id: @room.id)
+    # @GM = @job.where('GM', @room.id) 
+    # @PL = @job.where('PL', @room.id)
   end
   private
-
+  
 end

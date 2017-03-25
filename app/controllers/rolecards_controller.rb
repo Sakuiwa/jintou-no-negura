@@ -8,4 +8,5 @@ class RolecardsController < ApplicationController
 	# 	redirect_to room_path(params[:room_id])
 	# end
 	# 
+	# 
 end

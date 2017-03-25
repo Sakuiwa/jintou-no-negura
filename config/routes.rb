@@ -16,9 +16,9 @@ Rails.application.routes.draw do
 	resources :rooms ,only: [:show, :create, :game, :destroy] do
 		  resources :chats, only: [:create]
       resources :joins, only: [:create,:destroy]
-      resources :jobs, only: [:create]
-      resources :roles, only: [:create]
-      resources :rolecards, only: [:create]		
+      resources :jobs, only: [:create, :destroy]
+      # resources :roles, only: [:create]
+      # resources :rolecards, only: [:create]		
 	end
 
 
