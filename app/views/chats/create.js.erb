@@ -1,1 +1,3 @@
-$('#sub_btn').html('<%=j (render 'chats/chats', chat: @chats) %> ')
+$('#chats_form').val('');
+$('#chats_log').html('<%=j (render 'chats/chat', room: @room) %>'
+);

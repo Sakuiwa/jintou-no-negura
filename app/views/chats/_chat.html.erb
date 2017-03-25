@@ -1,0 +1,12 @@
+  <table>
+ 	<% room.chats.each do |chat| %>
+ 	<thead>
+ 		<tr>
+ 			<th><%= chat.name %> </th>
+ 			<th><%= chat.job %></th>
+ 			<th><p>画像</p></th>
+ 			<th><%= chat.content %></th>
+ 		</tr>
+ 	</thead>
+ 	<% end %>
+ </table>

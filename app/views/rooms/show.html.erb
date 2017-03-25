@@ -12,12 +12,17 @@
   </div>
 <% end %>
 
- 
+<div id="chats_log">
+	　<%= render 'chats/chat', room: @room %>
+</div>
+
 
  <p><%= current_user.name %><%= current_user.job %> 画像</p>
- 	
-    <!-- <input type="submit" value="発言"> -->
-　<%= render 'chats/chats', chat: @chats %>
+ 	<%= form_tag(room_chats_path(@room.id), :remote => true, :id =>"chats_form" ) do %>
+ 	<input type="text" name="content">
+ 	<%= submit_tag "発言", :id =>"sub_btn" %>
+ 	<% end %>
+
 <%#= link_to "役をつける",room_rolecards_path(@room.id), method: :post %>
 <%= link_to "ゲームに参加する",room_jobs_path(@room.id), method: :post %>
 <%= link_to "退出する",room_join_path(@join.room_id,@room.id), method: :delete %>
