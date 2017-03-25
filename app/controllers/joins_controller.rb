@@ -14,6 +14,10 @@ class JoinsController < ApplicationController
 		@room = Room.find(params[:id])
 		@join = current_user.joins.find_by!(room_id: @room.id)
 		@join.destroy
+		@room = Room.find(params[:room_id])
+        @user = current_user
+        @user.job = nil
+        @user.save
 		redirect_to root_path ,notice: "退出しました"
 	end
 	private
