@@ -11,24 +11,13 @@
    <%= flash[:alert] %>
   </div>
 <% end %>
- <table>
- 	<% @chats.each do |chat| %>
- 	<thead>
- 		<tr>
- 			<th><%= chat.name %> </th>
- 			<th><%= chat.job %></th>
- 			<th><p>画像</p></th>
- 			<th><%= chat.content %></th>
- 		</tr>
- 	</thead>
- 	<% end %>
- </table>
-<%= form_tag(room_chats_path(@room.id), :remote => true, :id =>"chats_form" ) do %>
+ 
+ 
+
  <p><%= current_user.name %><%= current_user.job %> 画像</p>
- 	<input type="text" name="content">
+ 	
     <!-- <input type="submit" value="発言"> -->
-    <%= submit_tag "送信", :id =>"sub_btn" %>
-<% end %>
+　<%= render 'chats/chat', chat: @chats %>
 <%#= link_to "役をつける",room_rolecards_path(@room.id), method: :post %>
 <%= link_to "ゲームに参加する",room_jobs_path(@room.id), method: :post %>
 <%= link_to "退出する",room_join_path(@join.room_id,@room.id), method: :delete %>
