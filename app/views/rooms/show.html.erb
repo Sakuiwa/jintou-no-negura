@@ -32,4 +32,4 @@
 <%#= link_to "役をつける",room_rolecards_path(@room.id), method: :post %>
 <%= link_to "ゲームに参加する",room_jobs_path(@room.id), method: :post %>
 <%= link_to "退出する",room_join_path(@join.room_id,@room.id), method: :delete %>
-<%= link_to "観戦する",room_jobs_path(@room.id), method: :delete %>
+<%= link_to "観戦する",room_job_path(@room.id), method: :delete %>
