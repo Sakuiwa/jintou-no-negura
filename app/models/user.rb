@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :rooms
   has_many :joins, dependent: :destroy
   has_many :jobs, dependent: :destroy
+  # has_many :roless, dependent: :destroy
   has_many :jinrous, dependent: :destroy
   has_many :kyoujins, dependent: :destroy
   has_many :kyousins, dependent: :destroy

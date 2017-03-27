@@ -1,8 +1,6 @@
 class ChatsController < ApplicationController
 
   before_action :authenticate_user!
-  
-
   def create 
     @room = Room.find(params[:room_id])
     @chat = Chat.new

@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
   get 'job/show'
 
@@ -10,15 +11,12 @@ Rails.application.routes.draw do
 
   root 'rooms#top'
 
-    # get '/rooms/:id' => 'rooms#show',as: 'room'
- 	# post '/rooms' => 'rooms#create'
- 	# get '/rooms/' => 'rooms#index'
-	resources :rooms ,only: [:show, :create, :game, :destroy] do
+	resources :rooms ,only: [:show, :create, :destroy] do
 		  resources :chats, only: [:create]
-      resources :joins, only: [:create,:destroy]
-      resources :jobs, only: [:create, :destroy]
-      # resources :roles, only: [:create]
-      # resources :rolecards, only: [:create]		
+      resource :joins, only: [:create,:destroy]
+      resource :jobs, only: [:create, :destroy]
+      resource :roles, only: [:create, :destroy]
+      resource :rolecards, only: [:create, :destroy]
 	end
 
 

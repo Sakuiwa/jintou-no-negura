@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jinrou: 1
+  murabito: 1
+  uranai: 1
+  reino: 1
+  kariudo: 1
+  neko: 1
+  kyojin: 1
+  kyosin: 1
+  kyoyu: 1
+  youko: 1
+  haitoku: 1
+
+two:
+  jinrou: 1
+  murabito: 1
+  uranai: 1
+  reino: 1
+  kariudo: 1
+  neko: 1
+  kyojin: 1
+  kyosin: 1
+  kyoyu: 1
+  youko: 1
+  haitoku: 1

@@ -19,7 +19,10 @@ class RoomsController < ApplicationController
     @user = current_user
     @join = current_user.joins.find_by!(room_id: @room.id)
     @job = User.select(:job,:room_id)
-  end
+    @role = Role.new
+    @pl = User.where("job = ?","PL").where(room_id: params[:id])
+    @gm = User.where("job = ?","GM").where(room_id: params[:id])
+  end     
   private
   
 end
