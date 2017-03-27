@@ -1,16 +1,7 @@
 <p>ここが<%= @room.room_name %>です </p>
 PL<%= @pl.count %>人</br>GM<%= @gm.count %>人
 
-<% if flash[:notice] %>
-  <div class="alert alert-success">
-    <%= flash[:notice] %>
-  </div>
-<% end %>
-<% if flash[:alert] %>
-  <div class="alert alert-danger">
-   <%= flash[:alert] %>
-  </div>
-<% end %>
+
 
 <div id="chats_log">
 	　<%= render 'chats/chat', room: @room %>

@@ -15,12 +15,24 @@
 
   <body>
   	<% if user_signed_in? %>
-  	<p class="add"><%= current_user.name %></p>
-  	<%= link_to "ログアウト",destroy_user_session_path,method: :delete %>
-    <% else %>
-  	<%= link_to "ログイン", new_user_session_path %>
-  	<%= link_to "新規登録", new_user_registration_path %>
-  	<% end %>
+    	<p class="add"><%= current_user.name %></p>
+    	<%= link_to "ログアウト",destroy_user_session_path,method: :delete %>
+      <% else %>
+    	<%= link_to "ログイン", new_user_session_path %>
+    	<%= link_to "新規登録", new_user_registration_path %>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <div class="alert alert-success">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
