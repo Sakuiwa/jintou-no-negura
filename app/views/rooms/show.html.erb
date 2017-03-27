@@ -17,7 +17,7 @@ PL<%= @pl.count %>人</br>GM<%= @gm.count %>人
 </div>
 
      <%= form_for([@room, @role]) do |f| %>
-     	人狼<%= f.number_field :jinrou%>
+     	人狼<%= f.number_field :jinrou %>
      	村人<%= f.number_field :murabito  %>
      	占い師<%= f.number_field :uranai %>
      	霊能者<%= f.number_field :reino %>
