@@ -9,17 +9,23 @@ PL<%= @pl.count %>人</br>GM<%= @gm.count %>人
 
      <%= form_for([@room, @role]) do |f| %>
      	人狼<%= f.number_field :jinrou %>
-     	村人<%= f.number_field :murabito  %>
+      狂人<%= f.number_field :kyojin %>
+      狂信者<%= f.number_field :kyosin %>
+     	村人<%= f.number_field :murabito %>
      	占い師<%= f.number_field :uranai %>
      	霊能者<%= f.number_field :reino %>
-     	狂人<%= f.number_field :kyojin %>
+      狩人<%= f.number_field :kariudo %>
+      共有者<%= f.number_field :kyoyu %>
+      猫又<%= f.number_field :neko %>
+      妖狐<%= f.number_field :youko %>
+      背徳者<%= f.number_field :haitoku %>
         <%= f.hidden_field :room_id, :value => @room.id
  %>
         <%= f.submit "配役決定" %>
      <% end %>
 <%= link_to "ゲームスタート!",room_rolecards_path(@room.id), method: :post %>
 
- <p><%= current_user.name %><%= current_user.job %> 画像</p>
+ <p><%= current_user.name %><%= current_user.job %><%= current_user.rolecard %> 画像</p>
  	<%= form_tag(room_chats_path(@room.id), :remote => true, :id =>"chats_form" ) do %>
  	<input type="text" name="content"> 
  	<%= submit_tag "発言", :id =>"sub_btn" %>

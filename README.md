@@ -47,3 +47,20 @@ pry で止めた時は　exit で戻れる。
  %>
         <%= submit_tag "配役決定" %>
      <% end %>
+
+
+
+     if array_rolecard.length === @users.count
+			 	i = 0
+			 	@users.each do |user|
+					user.rolecard = array_rolecard[i]
+			 		@users.save 
+			 		i++
+			   	end
+			   	redirect_to room_path(params[:room_id])
+			 else
+			 	redirect_to room_path(params[:room_id]),
+			 end
+
+
+			 
